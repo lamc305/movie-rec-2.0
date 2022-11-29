@@ -1,13 +1,13 @@
 import Head from 'next/head'
 import { getPopularMovies } from '../services/getPopularMovies'
 import { getPoster } from '../services/getPoster'
-import { getRecentlyAdded } from '../services/getRecentlyAdded'
+import { getTrending } from '../services/getTrending'
 import Header from '../components/Header'
 import PopularMovies from '../components/PopularMovies'
-import RecentlyMovies from '../components/RecentlyMovies'
+import ListOfMovies from '../components/ListOfMovies'
 import Footer from '../components/Footer'
 
-export default function Home({ poster, popularMovies, recentlyMovies }) {
+export default function Home({ poster, popularMovies, trendingMovies }) {
 	return (
 		<div>
 			<Head>
@@ -18,7 +18,7 @@ export default function Home({ poster, popularMovies, recentlyMovies }) {
 			<main>
 				<Header poster={poster} />
 				<PopularMovies popularMovies={popularMovies} />
-				<RecentlyMovies recentlyMovies={recentlyMovies} />
+				<ListOfMovies movies={trendingMovies} title='Trending' viewAll />
 				<Footer popularMovies={popularMovies} />
 			</main>
 		</div>
@@ -28,12 +28,12 @@ export default function Home({ poster, popularMovies, recentlyMovies }) {
 export async function getServerSideProps() {
 	const poster = await getPoster()
 	const popularMovies = await getPopularMovies()
-	const recentlyMovies = await getRecentlyAdded()
+	const trendingMovies = await getTrending()
 	return {
 		props: {
 			poster,
 			popularMovies,
-			recentlyMovies,
+			trendingMovies,
 		},
 	}
 }
