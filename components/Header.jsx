@@ -1,7 +1,7 @@
 import { BsSearch } from 'react-icons/bs'
 import Image from 'next/image'
+
 function Header({ poster }) {
-	console.log(poster)
 	const bgImage =
 		poster &&
 		`url("https://image.tmdb.org/t/p/original${

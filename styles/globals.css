@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer utilities {
-	.first img:nth-child(1) {
+	.first a:nth-child(1) {
 		grid-column: 1 / 3;
 		grid-row: 1 / 3;
 	}

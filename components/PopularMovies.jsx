@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { GoFlame } from 'react-icons/go'
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
 
@@ -18,14 +19,16 @@ function PopularMovies({ popularMovies }) {
 			</div>
 			<div className='grid  grid-rows-2 first grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 place-content-center'>
 				{justNivePopularMovies.map(({ id, poster_path, title }) => (
-					<Image
-						className='w-full object-contain'
-						key={id}
-						width={125}
-						height={200}
-						src={`https://image.tmdb.org/t/p/w500${poster_path}`}
-						alt={`Poster of the movie ${title}`}
-					/>
+					<Link key={id} href={`/movie-detail/${id}`}>
+						<Image
+							className='w-full object-contain'
+							key={id}
+							width={125}
+							height={200}
+							src={`https://image.tmdb.org/t/p/w500${poster_path}`}
+							alt={`Poster of the movie ${title}`}
+						/>
+					</Link>
 				))}
 			</div>
 		</section>
