@@ -24,7 +24,7 @@ function Header({ poster }) {
 						src='/assets/logo11.png'
 						alt='Image logo of movie rec'
 					/>
-					<p>Browse +</p>
+					
 				</div>
 				<div className='flex gap-2'>
 					<button>Login</button>

@@ -21,7 +21,7 @@ function PopularMovies({ popularMovies }) {
 				{justNivePopularMovies.map(({ id, poster_path, title }) => (
 					<Link key={id} href={`/movie-detail/${id}`}>
 						<Image
-							className='w-full object-contain'
+							className='w-full object-contain hover:scale-105 duration-200 transition-transform'
 							key={id}
 							width={125}
 							height={200}
