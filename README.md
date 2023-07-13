@@ -11,7 +11,7 @@ pnpm run dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ### ScreenShot 
-![portada]("https://raw.githubusercontent.com/lamc305/movie-rec-2.0/main/public/portada.webp")
+![portada]("./public/portada.webp")
 
 ## Learn More
 
