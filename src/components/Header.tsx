@@ -1,3 +1,5 @@
+"use client";
+
 import FormSearch from "./FormSearch";
 import Nav from "./Nav";
 
