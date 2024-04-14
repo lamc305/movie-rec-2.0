@@ -1,3 +1,6 @@
+export const dynamic = "force-dynamic";
+export const dynamicParams = true;
+
 import FormSearch from "../../../components/FormSearch";
 import Nav from "../../../components/Nav";
 import SearchMovies from "../../../components/SearchMovies";

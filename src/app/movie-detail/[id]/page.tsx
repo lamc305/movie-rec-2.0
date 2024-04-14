@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+export const dynamicParams = true;
 import ListOfMovies from "../../../components/ListOfMovies";
 import DetailView from "../../../modules/details/details";
 import { getMovieDetail, getSimilarMovies } from "../../../services";

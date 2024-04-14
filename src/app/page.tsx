@@ -1,3 +1,6 @@
+export const dynamic = "force-dynamic";
+export const dynamicParams = true;
+
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import ListOfMovies from "../components/ListOfMovies";
